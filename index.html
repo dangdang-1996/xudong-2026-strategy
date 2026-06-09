@@ -751,114 +751,125 @@ transition:width 1.8s cubic-bezier(0.22,1,0.36,1) !important;
   h1::after,h2::before{display:none}
 }
 
-/* 手机横屏/小平板 (≤768px) */
+/* 手机横屏/小平板 (≤768px) - 全面移动端优化 */
 @media(max-width:768px){
+  /* 基础布局 */
   .inner{max-width:100%;padding:0 16px}
   .section{
-    display:block;
-    padding:56px 16px;
+    padding:60px 16px;
     min-height:auto;
     perspective:none;
-    text-align:left
+    display:block;  /* 改为块级布局 */
   }
   .section::after{left:5%;right:5%}
-  .section-num{font-size:3rem;top:16px;left:16px;opacity:0.4}
-
+  .section-num{font-size:3rem;top:16px;left:16px;opacity:0.3}
+  
+  /* 标题优化 - 更紧凑自然 */
   h1{
-    font-size:clamp(1.5rem,5vw,2.2rem);
+    font-size:clamp(1.5rem,5.5vw,2.2rem);
     letter-spacing:1px;
-    margin-bottom:14px;
+    margin-bottom:20px;
     filter:none;
-    text-align:left
+    line-height:1.3
   }
   h2{
-    font-size:clamp(1.15rem,3.2vw,1.5rem);
+    font-size:clamp(1.15rem,3.8vw,1.5rem);
     letter-spacing:0.5px;
-    margin-bottom:18px;
-    text-align:left
+    margin-bottom:16px;
+    line-height:1.4
   }
-  h2::after{width:50px;height:2px;margin:8px 0 0;left:0;transform:none}
-
-  .big-num{font-size:clamp(1.8rem,5.5vw,2.6rem);text-align:left}
+  h2::before{display:none}
+  h2::after{width:50px;height:2px;margin:8px auto 0}
+  
+  /* 大数字 */
+  .big-num{font-size:clamp(1.8rem,7vw,2.8rem);line-height:1.2}
   .big-num .unit{font-size:0.35em}
-
+  
+  /* 子标题 */
+  .sub{font-size:0.85rem;margin-bottom:16px;line-height:1.5}
+  
+  /* 网格系统 */
   .grid{gap:12px;margin:12px 0}
-  .grid-2{grid-template-columns:1fr}
-  .grid-3,.grid-4{grid-template-columns:1fr 1fr}
-
+  .grid-2{grid-template-columns:1fr;gap:12px}
+  .grid-3{grid-template-columns:1fr 1fr;gap:10px}
+  .grid-4{grid-template-columns:1fr 1fr;gap:10px}
+  
+  /* 卡片 - 移动端优化 */
   .card{
-    padding:18px 16px;
-    border-radius:16px;
+    padding:18px 14px;
+    border-radius:14px;
     transform:none !important;
-    transition:background 0.25s ease,border-color 0.25s ease;
-    text-align:left
+    transition:all 0.25s ease;
+    text-align:left !important;
   }
   .card:hover{
-    transform:none !important;
-    background:rgba(255,255,255,0.05)
+    transform:translateY(-2px) scale(1.01) !important;
+    box-shadow:0 8px 24px rgba(245,166,35,0.1)
   }
-  .card .num{font-size:1.5rem;text-align:left}
-  .card .lbl{font-size:0.8rem;text-align:left}
-  .card .detail{font-size:0.76rem;text-align:left}
-
-  .compare{grid-template-columns:1fr;gap:12px}
+  .card .num{font-size:1.5rem;text-align:left!important}
+  .card .lbl{font-size:0.8rem;text-align:left!important;margin-top:4px}
+  .card .detail{font-size:0.75rem;text-align:left!important;line-height:1.4}
+  
+  /* 对比区域 */
+  .compare{grid-template-columns:1fr;gap:16px;margin:20px 0}
   .compare-vs{display:none}
-  .compare-box{padding:16px;border-radius:14px;text-align:left}
-
-  .chart-box{height:240px;padding:10px;border-radius:14px}
-
-  .conclusion{
-    padding:14px 16px;
-    margin:14px 0;
-    font-size:0.86rem;
-    line-height:1.65;
-    border-radius:12px;
-    text-align:left
-  }
+  .compare-box{padding:16px;border-radius:14px}
+  
+  /* 图表容器 */
+  .chart-box{height:280px;padding:10px;border-radius:14px;margin:16px 0}
+  
+  /* 结论框 */
+  .conclusion{padding:14px 16px;margin:14px 0;font-size:0.84rem;line-height:1.7;border-radius:0 10px 10px 0}
   .conclusion::before{display:none}
-
-  .progress-bar{height:20px;border-radius:10px}
-  .progress-fill{font-size:0.68rem;padding-right:8px}
-
-  .tag{
-    padding:6px 14px;
-    font-size:0.76rem;
-    margin:3px;
-    min-height:34px;
-    display:inline-flex;
-    align-items:center
-  }
-
+  
+  /* 进度条 */
+  .progress-bar{height:24px;border-radius:12px}
+  .progress-fill{font-size:0.65rem;padding-right:10px;border-radius:12px}
+  
+  /* 标签 */
+  .tag{padding:6px 12px;font-size:0.75rem;margin:3px 4px 3px 0;display:inline-flex;align-items:center;min-height:32px}
+  
+  /* 导航点隐藏 */
   .nav-dots{display:none!important}
-
-  .roadmap{padding-left:26px}
+  
+  /* 路线图 */
+  .roadmap{padding-left:24px;margin:20px 0}
   .roadmap::before{left:8px;width:2px}
-  .roadmap-item::before{left:-22px;width:10px;height:10px;border-width:2px}
-  .roadmap-item{margin-bottom:18px;padding-left:16px}
-  .roadmap-item h4{font-size:0.92rem}
-  .roadmap-item p{font-size:0.82rem;line-height:1.6}
-
-  .scroll-hint{bottom:20px;padding:10px 18px;font-size:0.8rem}
+  .roadmap-item::before{left:-20px;width:10px;height:10px;border-width:2px}
+  .roadmap-item{margin-bottom:16px;padding-left:16px}
+  .roadmap-item h4{font-size:0.9rem;margin-bottom:4px}
+  .roadmap-item p{font-size:0.8rem;line-height:1.5}
+  
+  /* 滚动提示 */
+  .scroll-hint{bottom:16px;padding:8px 16px;font-size:0.78rem;border-radius:20px}
   .scroll-hint span{font-size:1.2rem}
-
-  .sub{font-size:0.86rem;margin-bottom:16px;text-align:left;line-height:1.6}
-
-  body::before{animation:none}
+  
+  /* 性能优化 */
+  body::before{animation:none;background-size:100px 100px}
   body::after{animation:none}
-  .card::after,.card::before{display:none}
-  h1{animation:glow 4s ease-in-out infinite}
+  .card::after{display:none}
+  .card::before{opacity:0.3}
+  h1{animation:glow 3s ease-in-out infinite}
+  h1::after{display:none}
   .progress-fill::before{display:none}
-
-  .insight-compare{grid-template-columns:1fr !important;gap:14px !important}
+  
+  /* 封面区域 */
+  .hero-icon{margin-bottom:16px}
+  .hero-icon span{font-size:2.5rem!important}
+  .hero-subtitle{font-size:1rem;letter-spacing:1px;margin:10px 0}
+  .hero-desc{font-size:0.85rem}
+  .hero-cards{margin-top:28px!important}
+  .hero-scroll-hint{margin-top:28px}
+  
+  /* insight-compare 区域 */
+  .insight-compare{grid-template-columns:1fr!important;gap:14px!important;margin-bottom:16px!important}
   .insight-compare > div:nth-child(2){display:none}
-
-  .compare-enhanced{grid-template-columns:1fr !important}
+  
+  /* compare-enhanced */
+  .compare-enhanced{grid-template-columns:1fr!important}
   .compare-arrow{display:none}
   .compare-start{order:1}
   .compare-now{order:2}
-
-  img{max-width:100%;height:auto}
-  *{overflow-wrap:break-word;word-break:break-word}
 }
 
 /* 手机竖屏 (≤480px) */
@@ -1511,6 +1522,43 @@ body{position:relative;width:100%;overflow-x:hidden;}
 /* 8. 字体渲染优化 */
 body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;}
 
+
+
+/* ===== 新增：移动端平滑滚动和体验优化 ===== */
+@media(max-width:768px){
+  /* 优化滚动行为 */
+  html{scroll-behavior:smooth;-webkit-overflow-scrolling:touch}
+  
+  /* 确保内容不会溢出 */
+  body{overflow-x:hidden;width:100%;max-width:100vw}
+  
+  /* Section 内部内容防溢出 */
+  .section .inner{overflow-x:hidden;max-width:100%}
+  
+  /* 图片响应式 */
+  img{max-width:100%;height:auto;display:block}
+  
+  /* 灯箱移动端优化 */
+  .lightbox-container{max-width:95vw;max-height:85vh;padding:12px;border-radius:16px}
+  .lightbox-container img{max-width:90vw;max-height:75vh;border-radius:10px}
+  .lightbox-close{width:36px;height:36px;top:-10px;right:-10px;font-size:1.2rem}
+  
+  /* 图片放大图标移动端 */
+  .img-zoomable-icon{width:28px;height:28px;font-size:0.75rem;top:-6px;right:-6px}
+  
+  /* 进度条文字溢出处理 */
+  .progress-fill{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+}
+
+/* 平板尺寸优化 (768px - 1024px) */
+@media(min-width:769px) and (max-width:1024px){
+  .section{padding:70px 20px}
+  .inner{max-width:900px}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-3{grid-template-columns:repeat(2,1fr)}
+  .chart-box{height:320px}
+  .nav-dots{right:16px;padding:12px 10px}
+}
 </style>
 </head>
 <body>
@@ -1543,6 +1591,19 @@ body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-r
 </div>
 </div>
 
+
+<!-- S1.5: 自我介绍 -->
+<div class="section" id="s1-intro">
+<span class="section-num">00</span>
+<div class="inner reveal" style="display:flex;align-items:center;justify-content:center;min-height:70vh">
+  <div style="text-align:center;padding:60px 40px">
+    <div style="font-size:3.8rem;margin-bottom:32px;animation:fadeInUp 0.8s ease-out both">👋</div>
+    <div style="font-size:2.8rem;font-weight:800;color:var(--gold);letter-spacing:6px;margin-bottom:20px;text-shadow:0 0 30px var(--glow-gold);animation:fadeInUp 0.8s ease-out 0.15s both">陈文锦</div>
+    <div style="font-size:1.5rem;color:var(--muted);font-weight:500;letter-spacing:3px;animation:fadeInUp 0.8s ease-out 0.3s both">美团乐生活业务部 · KA大客户 · 全国美发负责人</div>
+    <div style="margin-top:48px;width:80px;height:3px;background:linear-gradient(90deg, transparent, var(--gold), transparent);border-radius:2px;margin-left:auto;margin-right:auto;animation:fadeInUp 0.8s ease-out 0.45s both"></div>
+  </div>
+</div>
+</div>
 
 <!-- S2: 平台数据洞察 - 增强对比版 -->
 <div class="section" id="s2">
