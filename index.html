@@ -1773,6 +1773,83 @@ body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-r
 </div></div>
 </div>
 
+
+<!-- S_USER: 用户画像 -->
+<div class="section" id="s-user">
+<span class="section-num">03</span>
+<div class="inner reveal">
+<h2>🧑‍🤝‍🧑 谁在为徐东买单：用户画像</h2>
+<p class="sub">642家门店 · 27个城市 · 深度读懂你的顾客</p>
+
+<!-- 第一行：新老客 + 性别 -->
+<div class="grid grid-2" style="margin-top:18px">
+  <div class="card stagger" style="padding:20px">
+    <div style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">新老客成交分布</div>
+    <div class="chart-box" id="chart-newold" style="height:200px"></div>
+    <div style="display:flex;justify-content:center;gap:24px;margin-top:10px;font-size:0.82rem">
+      <span><i style="color:#4FC3F7;display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px"></i>成交老客 <strong style="color:#e8e8e8">26.8%</strong></span>
+      <span><i style="color:#FFA726;display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px"></i>成交新客 <strong style="color:#e8e8e8">73.2%</strong></span>
+    </div>
+  </div>
+  <div class="card stagger" style="padding:20px">
+    <div style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">性别分布</div>
+    <div class="chart-box" id="chart-gender" style="height:200px"></div>
+    <div style="display:flex;justify-content:center;gap:24px;margin-top:10px;font-size:0.82rem">
+      <span><i style="color:#4FC3F7;display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px"></i>女性 <strong style="color:#e8e8e8">39%</strong></span>
+      <span><i style="color:#FFA726;display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px"></i>男性 <strong style="color:#e8e8e8">61%</strong></span>
+    </div>
+  </div>
+</div>
+
+<!-- 第二行：年龄 + 等级 -->
+<div class="grid grid-2" style="margin-top:18px">
+  <div class="card stagger" style="padding:20px">
+    <div style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">年龄分布（核销用户）</div>
+    <div class="chart-box" id="chart-age" style="height:220px"></div>
+  </div>
+  <div class="card stagger" style="padding:20px">
+    <div style="font-size:0.85rem;color:var(--muted);margin-bottom:12px">用户等级分布（美团点评）</div>
+    <div class="chart-box" id="chart-level" style="height:220px"></div>
+  </div>
+</div>
+
+<!-- 第三行：两年对比卡片 -->
+<div class="grid grid-3" style="margin-top:18px">
+  <div class="card stagger" style="text-align:center;padding:18px">
+    <div style="font-size:0.8rem;color:var(--muted);margin-bottom:8px">24年5月门店规模</div>
+    <div class="num" style="color:var(--cyan)"><span class="counter" data-target="299">0</span><span style="font-size:0.45em;-webkit-text-fill-color:var(--muted)">家</span></div>
+  </div>
+  <div class="card card-gold stagger" style="text-align:center;padding:18px">
+    <div style="font-size:0.8rem;color:var(--muted);margin-bottom:8px">26年5月门店规模</div>
+    <div class="num"><span class="counter" data-target="642">0</span><span style="font-size:0.45em;-webkit-text-fill-color:var(--muted)">家</span></div>
+    <div class="detail" style="margin-top:6px;font-size:0.78rem">两年扩张 <strong>+115%</strong></div>
+  </div>
+  <div class="card stagger" style="text-align:center;padding:18px">
+    <div style="font-size:0.8rem;color:var(--muted);margin-bottom:8px">人均消费均价变化</div>
+    <div class="num" style="color:#66BB6A"><span style="font-size:0.7em">41→</span><span class="counter" data-target="142">0</span><span style="font-size:0.45em;-webkit-text-fill-color:var(--muted)">元</span></div>
+    <div class="detail" style="margin-top:6px;font-size:0.78rem">提升 <strong>+246%</strong></div>
+  </div>
+</div>
+
+<!-- 结论 -->
+<div class="conclusion" style="margin-top:18px">
+<ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px">
+  <li style="display:flex;gap:10px;align-items:flex-start">
+    <span style="color:var(--gold);flex-shrink:0;margin-top:2px;font-size:1.1rem">▶</span>
+    <span style="font-size:0.93rem;line-height:1.7"><strong>男性占比61%</strong>，打破美发行业"女性主导"认知，差异化定位清晰 — 徐东抓住了被忽视的<strong style="color:var(--gold)">男性美发市场</strong></span>
+  </li>
+  <li style="display:flex;gap:10px;align-items:flex-start">
+    <span style="color:var(--gold);flex-shrink:0;margin-top:2px;font-size:1.1rem">▶</span>
+    <span style="font-size:0.93rem;line-height:1.7"><strong>25-30岁为核心黄金年龄段</strong>，LV3高净值用户占25%+ — 客群年轻、消费力强、品质要求高</span>
+  </li>
+  <li style="display:flex;gap:10px;align-items:flex-start">
+    <span style="color:var(--gold);flex-shrink:0;margin-top:2px;font-size:1.1rem">▶</span>
+    <span style="font-size:0.93rem;line-height:1.7">新客成交占<strong style="color:var(--gold)">73%</strong> → 拉新能力极强；老客仅27% → <strong style="color:var(--gold)">复购挖掘是下一阶段最大增长点</strong></span>
+  </li>
+</ul>
+</div>
+</div>
+</div>
 <div class="section" id="s5">
 <span class="section-num">04</span>
 <div class="inner reveal">
@@ -3127,6 +3204,78 @@ createAnimatedChart('chart-gtv', {
     itemStyle:{color:'#F5A623'},symbol:'circle',symbolSize:6
   }]
 });
+
+
+// ===== 用户画像图表 =====
+
+// 新老客成交分布（环形图）
+createAnimatedChart('chart-newold', {
+tooltip:{trigger:'item',backgroundColor:'rgba(19,27,46,0.95)',borderColor:'#F5A623',textStyle:{color:'#e8e8e8'},formatter:'{b}: {c} ({d}%)'},
+legend:{bottom:0,itemWidth:12,itemHeight:12,textStyle:{color:'#aaa',fontSize:11}},
+series:[{
+type:'pie',radius:['50%','72%'],center:['50%','45%'],
+avoidLabelOverlap:false,
+label:{show:false},
+emphasis:{label:{show:true,fontSize:14,fontWeight:'bold'}},
+data:[
+  {value:26.8,name:'成交老客',itemStyle:{color:'#4FC3F7'}},
+  {value:73.2,name:'成交新客',itemStyle:{color:'#FFA726'}}
+]
+}]
+});
+
+// 性别分布（横向条形图）
+createAnimatedChart('chart-gender', {
+tooltip:{trigger:'axis',backgroundColor:'rgba(19,27,46,0.95)',borderColor:'#F5A623',textStyle:{color:'#e8e8e8'},formatter:'{b}: {c}%'},
+grid:{left:80,right:30,top:10,bottom:20},
+xAxis:{type:'value',max:70,axisLabel:{formatter:'{value}%'},splitLine:{lineStyle:{color:'rgba(255,255,255,0.04)'}},axisLine:{lineStyle:{color:'#334'}}},
+yAxis:{type:'category',data:['女性','男性'],axisLine:{lineStyle:{color:'#334'}},axisTick:{show:false},axisLabel:{color:'#ccc',fontSize:13}},
+series:[{type:'bar',data:[39,61],barWidth:24,
+  itemStyle:{color:function(p){return p.dataIndex===0?'#4FC3F7':'#FFA726'},borderRadius:[0,4,4,0]},
+  label:{show:true,position:'inside',color:'#fff',fontSize:13,formatter:'{c}%'}}]
+});
+
+// 年龄分布（柱状图）
+createAnimatedChart('chart-age', {
+tooltip:{trigger:'axis',backgroundColor:'rgba(19,27,46,0.95)',borderColor:'#F5A623',textStyle:{color:'#e8e8e8'}},
+legend:{data:['核销占比'],top:0,textStyle:{color:'#aaa',fontSize:11}},
+grid:{left:50,right:15,top:30,bottom:35},
+xAxis:{type:'category',data:['20以下','20-25','25-30','31-35','36-40','40+'],axisLine:{lineStyle:{color:'#334'}},axisLabel:{color:'#888',fontSize:10,rotate:0}},
+yAxis:{type:'value',max:35,axisLabel:{formatter:'{value}%'},splitLine:{lineStyle:{color:'rgba(255,255,255,0.04)'}},axisLine:{lineStyle:{color:'#334'}}},
+series:[{name:'核销占比',type:'bar',
+  data:[12.5,28.2,31.0,13.2,3.2,11.9],
+  itemStyle:{
+    color:function(params){
+      var colors=['#90A4AE','#64B5F6','#FFA726','#FFB74D','#FFCC80','#FFE0B2'];
+      return colors[params.dataIndex];
+    },borderRadius:[4,4,0,0]
+  },
+  label:{show:true,position:'top',color:'#e8e8e8',fontSize:10,formatter:'{c}%'},
+  barWidth:'50%'
+}]
+});
+
+// 用户等级分布（柱状图）
+createAnimatedChart('chart-level', {
+tooltip:{trigger:'axis',backgroundColor:'rgba(19,27,46,0.95)',borderColor:'#F5A623',textStyle:{color:'#e8e8e8'}},
+legend:{data:['美团点评'],top:0,textStyle:{color:'#aaa',fontSize:11}},
+grid:{left:45,right:15,top:30,bottom:35},
+xAxis:{type:'category',data:['LV1','LV2','LV3','LV4','LV5','LV6','LV7'],axisLine:{lineStyle:{color:'#334'}},axisLabel:{color:'#888',fontSize:10}},
+yAxis:{type:'value',max:30,axisLabel:{formatter:'{value}%'},splitLine:{lineStyle:{color:'rgba(255,255,255,0.04)'}},axisLine:{lineStyle:{color:'#334'}}},
+series:[{name:'美团点评',type:'bar',
+  data:[14.24,5.65,25.2,20.37,19.28,13.28,1.98],
+  itemStyle:{
+    color:function(params){
+      var colorList=['#78909C','#90A4AE','#FFA726','#FFB74D','#FFC107','#FFD54F','#FFF176'];
+      return colorList[params.dataIndex];
+    },borderRadius:[4,4,0,0]
+  },
+  label:{show:true,position:'top',color:'#e8e8e8',fontSize:10,formatter:'{c}%'},
+  barWidth:'55%',
+  markPoint:{data:[{coord:[2,25.2],name:'最高',symbolSize:50,symbol:'pin',itemStyle:{color:'#FFA726'}}]}
+}]
+});
+
 
 // 渠道对比（堆叠柱状图）
 createAnimatedChart('chart-channel', {
